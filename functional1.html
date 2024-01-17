@@ -30,8 +30,15 @@
     const para = document.createElement('p');
 
     // Add your code here
+    const min=0;
+    const max=7;
+    var index=0;
+    function randomNum(min,max){
+      index=Math.floor(Math.random()*(max-min+1)+min);
+    }
     function chooseName(names,para){
-      const index=Math.floor(Math.random()*names.length);
+      //const index=Math.floor(Math.random()*names.length);
+      randomNum(min,max);
       const randomName=names[index];
       para.innerText=randomName;
     }
